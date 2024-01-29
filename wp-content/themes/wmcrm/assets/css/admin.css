@@ -78,5 +78,6 @@ input[type=radio]:checked::before{
 
 .result .separator {
     margin: 2rem 0;
+    padding: 1rem;
     border-bottom: 2px solid #fff;
 }
