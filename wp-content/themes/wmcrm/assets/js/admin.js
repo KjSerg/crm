@@ -150,3 +150,7 @@ function removeIcon() {
         currentFavicon.parentNode.removeChild(currentFavicon);
     }
 }
+
+function test(){
+    return true;
+}
