@@ -81,3 +81,8 @@ input[type=radio]:checked::before{
     padding: 1rem;
     border-bottom: 2px solid #fff;
 }
+
+.result {
+    height: 800px;
+    overflow: hidden;
+}

@@ -356,9 +356,9 @@ function create_project( $item, $parent = 0 ) {
 			if ( $project ) {
 				wp_set_post_terms( $project_id, get_category_array_id_by_name( $project['name'] ), 'categories', true );
 			}
-			echo "Проект '$name' створено [ID: $project_id] <em>Батьківський елемент: $parent</em> <hr>";
+			echo "Проект '$name' створено [ID: $project_id] <em>Батьківський елемент: $parent</em><br> <hr>";
 		} else {
-			echo "Проект '$name' не стоврено: <strong>" . $project_id->get_error_message() . '</strong><hr>';
+			echo "Проект '$name' не стоврено: <strong>" . $project_id->get_error_message() . '</strong><br><hr>';
 		}
 	} else {
 		echo "Проект '$name' вже існує ";
@@ -369,7 +369,7 @@ function create_project( $item, $parent = 0 ) {
 			$post_data['post_parent'] = $parent;
 			$project_id               = wp_update_post( $post_data, true );
 			if ( ! is_wp_error( $project_id ) ) {
-				echo "і він оновлений <em>Батьківський елемент: $parent</em> <hr>";
+				echo "і він оновлений <em>Батьківський елемент: $parent</em><br> <hr>";
 			}
 		}
 
@@ -455,9 +455,9 @@ function update_project( $item, $parent = 0 ) {
 				wp_set_post_terms( $project_id, get_tag_array_id_by_name( $tag_name ), 'tags', true );
 			}
 		}
-		echo "Проект '$name' оновлено [ID: $project_id] <em>Батьківський елемент: $parent</em> <hr>";
+		echo "Проект '$name' оновлено [ID: $project_id] <em>Батьківський елемент: $parent</em><br> <hr>";
 	} else {
-		echo "Проект '$name' НЕ оновлено: <strong>" . $project_id->get_error_message() . '</strong><hr>';
+		echo "Проект '$name' НЕ оновлено: <strong>" . $project_id->get_error_message() . '</strong><br><hr>';
 	}
 	if ( $child ) {
 		$children = array();
